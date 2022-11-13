@@ -30,7 +30,7 @@ namespace PasswordGeneratorAPI.Controllers
                     IsActive = true
                 };
 
-                _context.Passwords.Add(otp);
+                await _context.Passwords.AddAsync(otp);
 
                 // todo: send otp to identity server
 

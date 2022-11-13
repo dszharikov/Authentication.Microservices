@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordGeneratorAPI", "Pas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{723A0538-2059-4CE1-971E-A38791A90ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{2B169805-70E6-4E91-BC4D-6387851EE0D2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityModule", "IdentityModule", "{0A5FAFA1-263B-4027-88DC-4AE6FB8BCDBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityModule.Domain", "IdentityModule\IdentityModule.Domain\IdentityModule.Domain.csproj", "{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityModule.Infrastructure", "IdentityModule\IdentityModule.Infrastructure\IdentityModule.Infrastructure.csproj", "{EA654010-4F01-4EC7-8B77-7D71D01C0F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityModule.Web", "IdentityModule\IdentityModule.Web\IdentityModule.Web.csproj", "{266F664C-A1AC-427F-8B64-72770793C36E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,13 +41,26 @@ Global
 		{723A0538-2059-4CE1-971E-A38791A90ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723A0538-2059-4CE1-971E-A38791A90ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723A0538-2059-4CE1-971E-A38791A90ED6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B169805-70E6-4E91-BC4D-6387851EE0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B169805-70E6-4E91-BC4D-6387851EE0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B169805-70E6-4E91-BC4D-6387851EE0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B169805-70E6-4E91-BC4D-6387851EE0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA654010-4F01-4EC7-8B77-7D71D01C0F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA654010-4F01-4EC7-8B77-7D71D01C0F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA654010-4F01-4EC7-8B77-7D71D01C0F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA654010-4F01-4EC7-8B77-7D71D01C0F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266F664C-A1AC-427F-8B64-72770793C36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266F664C-A1AC-427F-8B64-72770793C36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266F664C-A1AC-427F-8B64-72770793C36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266F664C-A1AC-427F-8B64-72770793C36E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDD67EC6-213D-4DCE-A28F-D6A2D2994B6D} = {0A5FAFA1-263B-4027-88DC-4AE6FB8BCDBC}
+		{EA654010-4F01-4EC7-8B77-7D71D01C0F2E} = {0A5FAFA1-263B-4027-88DC-4AE6FB8BCDBC}
+		{266F664C-A1AC-427F-8B64-72770793C36E} = {0A5FAFA1-263B-4027-88DC-4AE6FB8BCDBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A98EAA4-9264-4E43-B8C7-6276765429E8}
