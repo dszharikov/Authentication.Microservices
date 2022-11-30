@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - rabbitmq_go_net
+
+  identitymodule:
+    image: ${DOCKER_REGISTRY-}identitymodule
+    container_name: 'identitymodule'
+    ports:
+        - 5001:5001
+    build:
+      context: .
+      dockerfile: src/IdentityModule/Dockerfile
+
+  gateway:
+    image: ${DOCKER_REGISTRY-}gateway
+    container_name: 'gateway'
+    ports:
+        - 7001:7001
+
+    build:
+      context: .
+      dockerfile: src/Gateway/Dockerfile
+
+
+  password:
+    image: ${DOCKER_REGISTRY-}password
+    container_name: 'password'
+    ports:
+        - 6001:6001
+    build:
+      context: .
+      dockerfile: src/Password/Dockerfile
+
+
+  
+
+networks:
+  rabbitmq_go_net:
+    driver: bridge
